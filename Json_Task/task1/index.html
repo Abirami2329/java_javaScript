@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center">
+    <h1>Upload Information</h1>
+    <form method="get" id="form" action="index2.html" target="_blank">
+        <label>Upload Image: </label><br>
+        <div class="inputbox">
+            <input type="file" accept="image/*" name="image" id="image-input" required />
+            <br><br>
+        </div>
+        <label>Upload JSON File: </label><br>
+        <div class="inputbox">
+            <input type="file" id="json-input" accept=".json" required />
+            <br><br>
+        </div>
+        <div class="inputbox">
+            <input type="submit" id="submit">
+        </div>
+    </form>
+   </div>
+    <script>
+        document.querySelector("#image-input").addEventListener("change", function() {
+            const reader = new FileReader();
+            reader.addEventListener("load", () => {
+                localStorage.setItem("image-storage", reader.result);
+                console.log(reader.result);
+            });
+            reader.readAsDataURL(this.files[0]);S
+        });
+        document.getElementById("json-input").addEventListener("change", function() {
+            var file_to_read = document.getElementById("json-input").files[0];
+            var fileread = new FileReader();
+            fileread.onload = function(e) {
+                var content = e.target.result;
+                var data = JSON.parse(content);
+                window.localStorage.setItem("myObject", JSON.stringify(data));
+            };
+            fileread.readAsText(file_to_read);
+        });
+    </script>
+</body>
+</html>
