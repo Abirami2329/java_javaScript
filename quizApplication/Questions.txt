@@ -1,0 +1,6 @@
+Number of primitive data types in Java are?,6,7,8,9,3
+What is the size of float and double in java?,32 and 64,32 and 32,64 and 64,64 and 32,1
+What is Runnable?,Abstract class,Interface,Method,Class,2
+Excepted created by try block is caught in which block?,catch,try,block,throw,1
+Where is System class defined?,java.lang.package,java.util.package,java.io.package,None,1
+Which of the following is used to find and fix bugs in the program?,JDK,JRE,JVM,JDB,4
