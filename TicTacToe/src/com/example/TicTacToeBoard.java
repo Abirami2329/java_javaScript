@@ -1,8 +1,4 @@
-package com.example;
-
-/**
- * Takes in and evaluates a string representing a tic tac toe board.
- */
+package com.ticTacToe;
 public class TicTacToeBoard {
   String board_lower;
   public TicTacToeBoard(String board) {
